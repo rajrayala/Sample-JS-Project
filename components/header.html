@@ -1,0 +1,31 @@
+<style>
+    .navbar {
+        min-height: 6.2em;
+        box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.175);
+    }
+    .navbar .logo-image {
+        width: 165px;
+    }
+    .header-logo-container {
+        min-height: 84px;
+        padding: 18px 0;
+    }
+</style>
+<header class="navbar navbar-expand-md fixed-top navbar-light bg-light px-md-0">
+    <nav class="container">
+        <a class="navbar-brand header-logo-container" href="javascript:void(0)">
+            <img [src]="content?.logo?.imageUrl" alt="" class="img-fluid logo-image">
+        </a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse"
+        (window:mouseup)="autoCloseMobileMenu($event.target)">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse pl-2 pl-md-0" id="navbarCollapse" [collapse]="isCollapsed" [isAnimated]="true">
+        <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link d-inline-block" href="/">Home</a>
+            <a class="nav-item nav-link d-inline-block" href="/about.html">About</a>
+        </div>
+      </div>
+    </nav>
+</header>

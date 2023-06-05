@@ -1,0 +1,22 @@
+.loading {
+    animation: fadeAnimation 2s ease;
+  }
+  
+  @keyframes fadeAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+    .container {
+        max-width: 100% !important;
+    }
+}
+
+main.app-content {
+    padding-top: 100px;
+}
